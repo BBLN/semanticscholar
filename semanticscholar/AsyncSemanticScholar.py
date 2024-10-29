@@ -501,7 +501,7 @@ class AsyncSemanticScholar:
         if min_citation_count:
             query += f'&minCitationCount={min_citation_count}'
         
-        max_results = 10000000 if bulk else 1000
+        max_results = 10000000 if bulk else limit
 
         results = await PaginatedResults.create(
                 self._requester,
