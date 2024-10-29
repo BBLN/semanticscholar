@@ -195,6 +195,8 @@ class PaginatedResults:
                 result_items.append(self._data_type(item))
 
             self._items += result_items
+        else:
+            self._next = -1
 
         return result_items
 
